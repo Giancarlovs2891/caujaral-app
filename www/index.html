@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#002753">
+    <meta name="theme-color" content="#002753">
+    <title>App</title>
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/kitchen-sink.css">
+    <link rel="stylesheet" href="css/app.css">
+    <!-- CSS for Datatables -->
+    <!-- <link rel="stylesheet" href="css/datatables/datatables.min.css"> -->
+
+    <link rel="icon" href="img/icon.png">
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- LEFT MENU -->
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-cover">
+      <div class="view navbar-fixed">
+        <div class="pages">
+          <div data-page="panel-left" class="page">
+            <div class="page-content" id="left-menu">
+              <div class="content-block left-menu-header">
+                <img src="img/logo.png" alt="">
+                <div class="left-menu-info-user">
+                  <p class="left-menu-user" id="user-info-menu">Giancarlo Valencia Sierra</p>
+                  <p class="left-menu-db" id="selected-store-menu">Bodega: FIC02</p>
+                </div>
+              </div>
+              <div class="list-block" id="main-options-menu">
+                <ul>
+                  <li>
+                    <a href="views/change-password.html" class="item-link close-panel" id="settings-menu">
+                      <div class="item-content">
+                        <div class="item-media icon-lighten"><i class="material-icons">settings</i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Configuración</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="views/sync-data.html" class="item-link close-panel" id="sync-data-menu">
+                      <div class="item-content">
+                        <div class="item-media icon-lighten"><i class="material-icons">sync</i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Sincronización</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-block" id="client-options-menu" style="display: none;">
+                <ul>
+                  <li>
+                    <a href="views/change-password.html" class="item-link close-panel" id="client-profile-edit-menu">
+                      <div class="item-content">
+                        <div class="item-media icon-lighten"><i class="material-icons">settings</i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Actualizar datos</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="views/sync-data.html" class="item-link close-panel" id="client-product-list-menu">
+                      <div class="item-content">
+                        <div class="item-media icon-lighten"><i class="material-icons">sync</i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Pedidos</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="views/debts.html" class="item-link close-panel" id="client-debts-menu">
+                      <div class="item-content">
+                        <div class="item-media icon-lighten"><i class="material-icons">sync</i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Cartera</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-block sign-out-menu-link">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media icon-lighten"><i class="material-icons">signal_wifi_off</i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Trabajar offline</div>
+                        <div class="item-after">
+                          <label class="label-switch">
+                            <input type="checkbox">
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="item close-panel" id="sign-out-app-menu">
+                      <div class="item-content">
+                        <div class="item-media icon-lighten"><i class="material-icons">exit_to_app</i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Cerrar Sesión</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END LEFT MENU -->
+
+    <!-- MAIN CONTAINER -->
+    <div class="view view-main">
+      <div class="pages navbar-fixed">
+        <div data-page="index" class="page">
+          <div class="page-content">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="js/DB.js"></script>
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <script type="text/javascript" src="js/myApp.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="js/cordova.js"></script> -->
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- MODULES -->
+    <script type="text/javascript" src="js/modules/auth.js"></script>
+    <script type="text/javascript" src="js/modules/app-main-info.js"></script>
+    <script type="text/javascript" src="js/modules/client.js"></script>
+    <script type="text/javascript" src="js/modules/products.js"></script>
+    <script type="text/javascript" src="js/modules/debts.js"></script>
+
+    <!-- SCRIPT for datatables -->
+    <script type="text/javascript" src="js/datatables/datatables.min.js"></script>
+
+    <!-- ON DOCUMENT READY -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        if (!localStorage.getItem("auth")) {
+          mainView.router.loadPage(APP_VIEWS.login);
+        } else {
+          mainView.router.loadPage(APP_VIEWS.stores);
+        }
+      });
+    </script>
+
+  </body>
+</html>
