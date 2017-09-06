@@ -1,3 +1,14 @@
+function addProductToCart(x) {
+  myApp.prompt('Cantidad', function (data) {
+      // @data contains input value
+      // myApp.confirm('Are you sure that your name is ' + data + '?', function () {
+      //   myApp.addNotification({
+      //       message: 'Producto agregado Cantidad:' + data
+      //   });
+      // });
+  });
+}
+
 myApp.onPageInit('products-list', function (page){
   function addProductToCart(x) {
     myApp.prompt('Cantidad', function (data) {
@@ -15,12 +26,11 @@ myApp.onPageInit('products-list', function (page){
     var cod = Math.floor(Math.random()*90000) + 10000;
       items.push({
           id: i,
-          descripcion: "Dolex 100 MG PED MASTI X 350 tabletas",
+          descripcion: "Plato " + i+1,
           codigo: cod.toString(),
-          precio: "759.999",
+          precio: "35.999",
           iva: "15.689",
-          stock: "69",
-          img: "http://lorempixel.com/360/360/people/"+Math.floor((Math.random() * 10) + 1)
+          img: "http://lorempixel.com/360/360/food/"+Math.floor((Math.random() * 10) + 1)
       });
   }
 
@@ -52,7 +62,6 @@ myApp.onPageInit('products-list', function (page){
                       '<div class="item-text product-list-price">${{precio}}</div>' +
                       '<div class="item-text product-list-od">' +
                         '<span>IVA: 0</span>' +
-                        '<span class="product-list-stock">Stock: {{stock}}</span>' +
                       '</div>' +
                     '</div>' +
                   '</a>' +

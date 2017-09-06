@@ -33,7 +33,7 @@
                 <img src="img/logo.png" alt="">
                 <div class="left-menu-info-user">
                   <p class="left-menu-user" id="user-info-menu">Giancarlo Valencia Sierra</p>
-                  <p class="left-menu-db" id="selected-store-menu">Bodega: FIC02</p>
+                  <p class="left-menu-db" id="selected-store-menu">Código: 193729102</p>
                 </div>
               </div>
               <div class="list-block" id="main-options-menu">
@@ -41,9 +41,9 @@
                   <li>
                     <a href="views/change-password.html" class="item-link close-panel" id="settings-menu">
                       <div class="item-content">
-                        <div class="item-media icon-lighten"><i class="material-icons">settings</i></div>
+                        <div class="item-media icon-lighten"><i class="material-icons">restaurant_menu</i></div>
                         <div class="item-inner">
-                          <div class="item-title">Configuración</div>
+                          <div class="item-title">Restaurantes</div>
                         </div>
                       </div>
                     </a>
@@ -51,9 +51,9 @@
                   <li>
                     <a href="views/sync-data.html" class="item-link close-panel" id="sync-data-menu">
                       <div class="item-content">
-                        <div class="item-media icon-lighten"><i class="material-icons">sync</i></div>
+                        <div class="item-media icon-lighten"><i class="material-icons">golf_course</i></div>
                         <div class="item-inner">
-                          <div class="item-title">Sincronización</div>
+                          <div class="item-title">Deportes</div>
                         </div>
                       </div>
                     </a>
@@ -97,18 +97,14 @@
               <div class="list-block sign-out-menu-link">
                 <ul>
                   <li>
-                    <div class="item-content">
-                      <div class="item-media icon-lighten"><i class="material-icons">signal_wifi_off</i></div>
-                      <div class="item-inner">
-                        <div class="item-title">Trabajar offline</div>
-                        <div class="item-after">
-                          <label class="label-switch">
-                            <input type="checkbox">
-                            <div class="checkbox"></div>
-                          </label>
+                    <a href="views/change-password.html" class="item-link close-panel" id="client-profile-edit-menu">
+                      <div class="item-content">
+                        <div class="item-media icon-lighten"><i class="material-icons">settings</i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Configuración</div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                   <li>
                     <a href="#" class="item close-panel" id="sign-out-app-menu">
@@ -164,7 +160,7 @@
         if (!localStorage.getItem("auth")) {
           mainView.router.loadPage(APP_VIEWS.login);
         } else {
-          mainView.router.loadPage(APP_VIEWS.stores);
+          mainView.router.loadPage(APP_VIEWS.main);
         }
       });
     </script>
